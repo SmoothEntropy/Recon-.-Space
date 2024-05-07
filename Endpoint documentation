@@ -1,2 +1,21 @@
 Here is described how to used the endpoints and what purpose they serve.
 
+Endpoint explanation
+Recon[.]Space offer the capability to request data using endpoint, basically that just an URL that looks like this: https://api.recon.space/myapi/orgnamegpspublic/.
+This will give provide a response in JSON format. 
+Example:
+Request : https://api.recon.space/myapi/orgnamegpspublic/
+Response : [...] {
+            "id": 1539,
+            "organisationname": "EMTech Global",
+            "tags": [
+                "IT-AI-Cyber-Data",
+                "Manufacturer"
+            ],
+            "gps": "POINT(24.9347 60.1719)"
+        }, [...]
+
+Authenticated VS Non Authenticated
+You can collect and fetch data from the public endpoint without credential just by accessing the url.
+Authenticated endpoints need the user to provide an access token that is obtained after a sucessful login.
+
