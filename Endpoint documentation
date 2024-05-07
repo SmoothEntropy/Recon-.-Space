@@ -15,12 +15,12 @@ Response : [...] {
             "gps": "POINT(24.9347 60.1719)"
         }, [...]
 
-Authenticated VS Non Authenticated
-You can collect and fetch data from the public endpoint without credential just by accessing the url.
+Authenticated VS Public endpoint
+You can collect and fetch data from the public endpoint without credential just by accessing the url of the endpoint.
 Authenticated endpoints need the user to provide an access token that is obtained after a sucessful login.
 
 Example to use authenticated endpoint:
-1- get the access token by log in using https://api.recon.space/myapi/register
+1- get the access token by log in using https://api.recon.space/myapi/connect/
 2 - submit you credentials (login password)
 3 - get your access token that should appear in the response like this:
 {
@@ -46,5 +46,11 @@ response = requests.post(url,json=data, headers=headers)
 print(response)
 print(response.json())
 
+List of endpoints
+All start by https://recon.space/myapi/
 
+Public endpoint:
+register/ using POST allows a user to register an account by providing an email address and a password.
+connect/ using POST allows a user to connect to its account, an access token and a refresh token is then provided.
+refresh/ using POST allows a user to get a new access token 
 
