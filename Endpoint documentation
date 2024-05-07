@@ -19,3 +19,32 @@ Authenticated VS Non Authenticated
 You can collect and fetch data from the public endpoint without credential just by accessing the url.
 Authenticated endpoints need the user to provide an access token that is obtained after a sucessful login.
 
+Example to use authenticated endpoint:
+1- get the access token by log in using https://api.recon.space/myapi/register
+2 - submit you credentials (login password)
+3 - get your access token that should appear in the response like this:
+{
+    "refresh": "eyJhbGciOi...JIUzI1NicCI6IkpXVCJ9.eyJ0b2tlbl90J1c...2VydHlwZSI6InVzZXIifQ.Bu2wzzDCQBvq88TMoyO...FB6IRtTbsK4",
+    "access": "eyJhbG...ciOXVCJ9.eyJ0b2tlbl90eX...BlIjoiYMTUwODk4XNlcl9pZCI6NjEsInVzZXJ0eXBlIjoidXNlciJ9.gqhc...MvQwDbMg"
+}
+
+4.1 use your access token using recon.space app:
+Go to recon.space, log in, use the advanced search page to search all data easily. 
+
+4.2 use your access token using curl:
+curl -H "Authorization: JWT eyJhbG...ciOXVCJ9.eyJ0b2tlbl90eX...BlIjoiYMTUwODk4XNlcl9pZCI6NjEsInVzZXJ0eXBlIjoidXNlciJ9.gqhc...MvQwDbMg" https://api.recon.space/myapi/orgname/789/ |jq
+info: |jq is to chain command with jq tool that you can install using apt install jq. It makes json output beautifuler :)
+
+4.3 use you access token using python3:
+import requests
+
+auth_token='eyJhbG...ciOXVCJ9.eyJ0b2tlbl90eX...BlIjoiYMTUwODk4XNlcl9pZCI6NjEsInVzZXJ0eXBlIjoidXNlciJ9.gqhc...MvQwDbMg'
+headers = {'Authorization': f'JWT {auth_token}'}
+
+url = 'https://api.recon.space/myapi/orgname/789/'
+response = requests.post(url,json=data, headers=headers)
+print(response)
+print(response.json())
+
+
+
