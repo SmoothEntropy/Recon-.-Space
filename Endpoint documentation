@@ -1,7 +1,7 @@
 Here is described how to used the endpoints and what purpose they serve.
 
 Endpoint explanation
-Recon[.]Space offer the capability to request data using endpoint, basically that just an URL that looks like this: https://api.recon.space/myapi/orgnamegpspublic/.
+Recon[.]Space offer the capability to request data using endpoint, basically that just an URL that looks like this: https://api.recon.space/myapi/<endpoint>/.
 This will give provide a response in JSON format. 
 Example:
 Request : https://api.recon.space/myapi/orgnamegpspublic/
