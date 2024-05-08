@@ -243,6 +243,10 @@ You can collect and fetch data from public endpoints without credentials by acce
 1. Obtain the access token by logging in using `https://api.recon.space/myapi/connect/`.
 2. Submit your credentials (login password).
 3. Obtain your access token from the response.
+```{
+    "refresh": "eyJhbGciOi...JIUzI1NicCI6IkpXVCJ9.eyJ0b2tlbl90J1c...2VydHlwZSI6InVzZXIifQ.Bu2wzzDCQBvq88TMoyO...FB6IRtTbsK4",
+    "access": "eyJhbG...ciOXVCJ9.eyJ0b2tlbl90eX...BlIjoiYMTUwODk4XNlcl9pZCI6NjEsInVzZXJ0eXBlIjoidXNlciJ9.gqhc...MvQwDbMg"
+}```
 
 **Using the Access Token:**
 
@@ -291,6 +295,35 @@ All endpoint URLs start with `https://recon.space/myapi/`.
 ## Filters
 
 Certain endpoints can be used with filters to narrow down results.
+
+## Filters:
+
+Certain endpoints can be used with filters. Rather than getting a list of all data and then searching within, you can use filters.
+
+### orgnamepublic/:
+- `orgname=spacex`
+- `tags=Agency` or `tags=Agency,Manufacturer`
+
+### orgnamegpspublic/:
+- `orgname=spacex`
+- `tags=Agency` or `tags=Agency,Manufacturer`
+
+### orgname/:
+- `orgname=spacex`
+- `tags=Agency` or `tags=Agency,Manufacturer`
+- `hassatellitenamed=Oneweb`
+- `hassatelliteoperatedbycountry=Brazil`
+
+### orgnamegps/:
+- `orgname=spacex`
+- `tags=Agency` or `tags=Agency,Manufacturer`
+
+### satellite/:
+- `satellitename=Tiang`
+- `satellitecountryoperator=China`
+- `satelliteorbit=GEO`
+- `satellitelaunchvehicle=Falcon`
+
 
 **Examples:**
 
