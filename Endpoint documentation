@@ -47,10 +47,22 @@ print(response)
 print(response.json())
 
 List of endpoints
-All start by https://recon.space/myapi/
+All endpoint urls start by https://recon.space/myapi/
 
 Public endpoint:
+Authentication public endpoints:
 register/ using POST allows a user to register an account by providing an email address and a password.
 connect/ using POST allows a user to connect to its account, an access token and a refresh token is then provided.
-refresh/ using POST allows a user to get a new access token 
+refresh/ using POST allows a user to get a new access token.
+
+Data public endpoints
+records/ using GET allows a user to get an insight of the database content.
+orgnamepublic/ GET allows a user to get information about space organization.
+orgnamegpspublic/ GET allows a user to get information about localisation of space organization.
+weaponspublic/ GET allows a user to get information about space related weapons.
+tag/ GET allows a user to get all tags available for filtering purpose.
+
+Private endpoints:
+myaccount/ once logged in you can check your account details.
+
 
