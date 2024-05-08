@@ -1,6 +1,6 @@
-Here is described how to used the endpoints and what purpose they serve.
+#Here is described how to used the endpoints and what purpose they serve.
 
-Endpoint explanation
+###Endpoint explanation
 Recon[.]Space offer the capability to request data using endpoint, basically that just an URL that looks like this: https://api.recon.space/myapi/<endpoint>/.
 This will give provide a response in JSON format. 
 Example:
@@ -15,11 +15,11 @@ Response : [...] {
             "gps": "POINT(24.9347 60.1719)"
         }, [...]
 
-Authenticated VS Public endpoint
+##Authenticated VS Public endpoint
 You can collect and fetch data from the public endpoint without credential just by accessing the url of the endpoint.
 Authenticated endpoints need the user to provide an access token that is obtained after a sucessful login.
 
-Example to use authenticated endpoint:
+###Example to use authenticated endpoint:
 1- get the access token by log in using https://api.recon.space/myapi/connect/
 2 - submit you credentials (login password)
 3 - get your access token that should appear in the response like this:
@@ -49,24 +49,24 @@ print(response.json())
 List of endpoints
 All endpoint urls start by https://recon.space/myapi/
 
-Public endpoint:
-Authentication public endpoints:
+##Public endpoint:
+###Authentication public endpoints:
 register/ using POST allows a user to register an account by providing an email address and a password.
 connect/ using POST allows a user to connect to its account, an access token and a refresh token is then provided.
 refresh/ using POST allows a user to get a new access token.
 
-Data public endpoints
+###Data public endpoints
 records/ using GET allows a user to get an insight of the database content. 
 orgnamepublic/ GET allows a user to get information about space organization. (50% of DB content)
 orgnamegpspublic/ GET allows a user to get information about localisation of space organization. (33% of DB content)
 weaponspublic/ GET allows a user to get information about space related weapons. (not all details)
 tag/ GET allows a user to get all tags available for filtering purpose.
 
-Authenticated endpoints:
-Authentication Authenticated endpoints
+##Authenticated endpoints:
+###Authentication Authenticated endpoints
 myaccount/ once logged in you can check your account details.
 
-Data Authenticated endpoints
+###Data Authenticated endpoints
 orgname/ GET allows a user to get information about space organization.
 orgnamegps/ GET allows a user to get information about space organization.
 financial/ GET allows a user to get information about finance of a space organization.
