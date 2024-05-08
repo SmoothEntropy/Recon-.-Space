@@ -112,6 +112,96 @@ https://api.recon.space/myapi/satellite/?satelliteorbit=LEO
 Looking for satellite launched by Ariane and the satellite is operated by China
 https://api.recon.space/myapi/satellite/?satellitelaunchvehicle=Ariane&satellitecountryoperator=China
 
-Looking for orgname that produced equipement and where 'space' is contained in the name of this organization
-https://api.recon.space/myapi/orgname/?tags=manufacturer&orgname=space
+Looking for location of orgnames that produced equipement and where 'lock' is contained in the name of this organization
+https://api.recon.space/myapi/orgname/?tags=manufacturer&orgname=lock
 
+Use case with curl:
+1 - Looking for orgname which contain lock in the name and that is taggued as Manufacturer. ( '| jq' at the end is optional)
+
+Command: curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space/myapi/orgname/?orgname=lock&tags=Manufacturer' |jq
+response:
+{
+  "id": 3011,
+  "tags": [
+    "Manufacturer",
+    "Research"
+  ],
+  "domains": [
+    {
+      "id": 3011,
+      "domain": "lockheedmartin.com"
+    }
+  ],
+  "satellites": [],
+  "organisationname": "Lockheed Martin",
+  "countrycode": "US",
+  "headquarterslocation": "Bethesda, Maryland, United States",
+  "postalcode": "20817",
+  "orgtype": "For Profit",
+  "founded": "1912-01-01",
+  "fundingtype": "",
+  "totalfunding": 0,
+  "employees": "10001+",
+  "creator": "",
+  "description": "Lockheed Martin is a global security and aerospace company specialized in advanced technology systems, products and services.",
+  "websiteurl": "http://www.lockheedmartin.com",
+  "twitterurl": "http://www.twitter.com/LockheedMartin",
+  "facebookurl": "http://www.facebook.com/lockheedmartin",
+  "linkedinurl": "http://www.linkedin.com/company/lockheed-martin",
+  "contactemail": "community.relations@lmco.com",
+  "contactphone": "(866)562-2363",
+  "websitemontlyvisits": "1,529,369",
+  "lastleadershiphiringdate": "",
+  "patentsgranted": "4,295",
+  "trademarksregistered": "502",
+  "gps": "POINT(-77.13905284224023 39.03318067316889)",
+  "spaceweapons": [
+    22
+  ],
+  "financial": [
+    891
+  ]
+}
+
+2 - Looking for the financial data of lockheed
+curl -X GET  -H "Accept: application/json" 'http://127.0.0.1:8000/myapi/orgname/3011/' |jq
+
+3 - Looking for details about the internet domain where 3011 is the id of the domain (not the organzation id)
+curl -X GET  -H "Accept: application/json" 'http://127.0.0.1:8000/myapi/domain/3011/' |jq
+response:
+[...]
+{
+      "id": 8348,
+      "ipaddress": "166.21.250.209"
+    },
+[...]
+    {
+      "id": 57924,
+      "subdomain": "www.lockheedmartin.com",
+      "port": "443"
+    }
+  ],
+  "domain": "lockheedmartin.com"
+}
+[...]
+
+3.1 - Looking for the ip of a of subdomain
+curl -X GET  -H "Accept: application/json" 'http://127.0.0.1:8000/myapi/subdomain/57924/' |jq
+{
+  "id": 55377,
+  [...]
+  "technologies": "F5 BigIP",
+  "ipsubdom": "166.21.250.209",
+  [...]
+}
+3.2 - Looking for the gps location of the www.lockheedmartin.com lockheed server.
+curl -X GET  -H "Accept: application/json" 'http://127.0.0.1:8000/myapi/ip/8348/' |jq
+response:
+ "id": 8348,
+  "ipaddress": "166.21.250.209",
+  [...]
+  "iplongitude": "-97.822",
+  "iplatitude": "37.751",
+  "ipgeopoint": "POINT(-97.822 37.751)",
+  [...]
+}
