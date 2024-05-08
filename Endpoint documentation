@@ -76,3 +76,22 @@ domain/ GET allows a user to get information about domains owned by a space orga
 subdomain/ GET allows a user to get information about sub-domains used by a space organization.
 ip/ GET allows a user to get information about information about ip addresses used by a space organization.
 taglaws/ GET allows a user to get information of potential laws and guidelines to which a space organziation is subject to.
+
+
+Filters:
+Certain endpoints can be used with filters. Rather than getting a list of all data and then searching within, you can use filters.
+
+orgnamepublic/:
+orgname=spacex
+tags=Agency or tags=Agency,Manufacturer
+
+orgnamegpspublic/:
+orgname=spacex
+tags=Agency or tags=Agency,Manufacturer
+
+
+orgname/:
+orgname=spacex
+tags=Agency or tags=Agency,Manufacturer
+
+
