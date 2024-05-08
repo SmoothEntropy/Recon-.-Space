@@ -89,9 +89,29 @@ orgnamegpspublic/:
 orgname=spacex
 tags=Agency or tags=Agency,Manufacturer
 
-
 orgname/:
 orgname=spacex
 tags=Agency or tags=Agency,Manufacturer
+hassatellitenamed=Oneweb
+hassatelliteoperatedbycountry=Brazil
 
+orgnamegps/:
+orgname=spacex
+tags=Agency or tags=Agency,Manufacturer
+
+satellite/:
+satellitename=Tiang
+satellitecountryoperator=China
+satelliteorbit=GEO
+satellitelaunchvehicle=Falcon
+
+Examples:
+Looking for satellite in LEO
+https://api.recon.space/myapi/satellite/?satelliteorbit=LEO
+
+Looking for satellite launched by Ariane and the satellite is operated by China
+https://api.recon.space/myapi/satellite/?satellitelaunchvehicle=Ariane&satellitecountryoperator=China
+
+Looking for orgname that produced equipement and where 'space' is contained in the name of this organization
+https://api.recon.space/myapi/orgname/?tags=manufacturer&orgname=space
 
