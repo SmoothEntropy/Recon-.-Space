@@ -354,10 +354,11 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT <youraccesstok
   curl -X GET -H "Accept: application/json" -H "Authorization: JWT <youraccesstoken>" 'https://api.recon.space/myapi/ip/8348/' | jq
   ```
 
-Use case with curl:
-- 1 - Looking for orgname which contain lock in the name and that is taggued as Manufacturer. ( '| jq' at the end is optional)
+Example of Use case :
+1 - Looking for orgname which contain lock in the name and that is taggued as Manufacturer. ( '| jq' at the end is optional)
 
-```bash curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space/myapi/orgname/?orgname=lock&tags=Manufacturer' |jq ```
+```bash 
+curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space/myapi/orgname/?orgname=lock&tags=Manufacturer' |jq ```
 ```json
 response:
 {
