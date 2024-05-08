@@ -56,13 +56,23 @@ connect/ using POST allows a user to connect to its account, an access token and
 refresh/ using POST allows a user to get a new access token.
 
 Data public endpoints
-records/ using GET allows a user to get an insight of the database content.
-orgnamepublic/ GET allows a user to get information about space organization.
-orgnamegpspublic/ GET allows a user to get information about localisation of space organization.
-weaponspublic/ GET allows a user to get information about space related weapons.
+records/ using GET allows a user to get an insight of the database content. 
+orgnamepublic/ GET allows a user to get information about space organization. (50% of DB content)
+orgnamegpspublic/ GET allows a user to get information about localisation of space organization. (33% of DB content)
+weaponspublic/ GET allows a user to get information about space related weapons. (not all details)
 tag/ GET allows a user to get all tags available for filtering purpose.
 
-Private endpoints:
+Authenticated endpoints:
+Authentication Authenticated endpoints
 myaccount/ once logged in you can check your account details.
 
-
+Data Authenticated endpoints
+orgname/ GET allows a user to get information about space organization.
+orgnamegps/ GET allows a user to get information about space organization.
+financial/ GET allows a user to get information about finance of a space organization.
+satellite/ GET allows a user to get information about satellite of a space organization.
+weapons/ GET allows a user to get information about space related weapons.
+domain/ GET allows a user to get information about domains owned by a space organization.
+subdomain/ GET allows a user to get information about sub-domains used by a space organization.
+ip/ GET allows a user to get information about information about ip addresses used by a space organization.
+taglaws/ GET allows a user to get information of potential laws and guidelines to which a space organziation is subject to.
