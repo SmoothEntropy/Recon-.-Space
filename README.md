@@ -49,41 +49,41 @@ You can collect and fetch data from public endpoints without credentials by acce
 
 ## List of Endpoints
 
-All endpoint URLs start with `https://recon.space/myapi/`.
+All endpoint URLs start with `https://api.recon.space/myapi/`.
 
 ### Public Endpoints
 
 #### Authentication Public Endpoints:
 
-- `register/`: Allows a user to register an account by providing an email address and a password.
-- `connect/`: Allows a user to connect to their account; an access token and a refresh token are provided.
-- `refresh/`: Allows a user to get a new access token.
+- `register/`: Allows a user to register an account by providing an email address and a password. (POST)
+- `connect/`: Allows a user to connect to their account; an access token and a refresh token are provided. (POST)
+- `refresh/`: Allows a user to get a new access token. (POST)
 
 #### Data Public Endpoints:
 
-- `records/`: Allows a user to get an insight into the database content.
-- `orgnamepublic/`: Allows a user to get information about space organizations (50% of DB content).
-- `orgnamegpspublic/`: Allows a user to get information about the localization of space organizations (33% of DB content).
-- `weaponspublic/`: Allows a user to get information about space-related weapons (not all details).
-- `tag/`: Allows a user to get all tags available for filtering purposes.
+- `records/`: Allows a user to get an insight into the database content. (GET)
+- `orgnamepublic/`: Allows a user to get information about space organizations (50% of DB content). (GET)
+- `orgnamegpspublic/`: Allows a user to get information about the localization of space organizations (33% of DB content). (GET)
+- `weaponspublic/`: Allows a user to get information about space-related weapons (not all details). (GET)
+- `tag/`: Allows a user to get all tags available for filtering purposes. (GET)
 
 ### Authenticated Endpoints
 
 #### Authentication Authenticated Endpoints:
 
-- `myaccount/`: Once logged in, you can check your account details.
+- `myaccount/`: Once logged in, you can check your account details. (POST)
 
 #### Data Authenticated Endpoints:
 
-- `orgname/`: Allows a user to get information about space organizations.
-- `orgnamegps/`: Allows a user to get information about space organizations.
-- `financial/`: Allows a user to get information about finance of a space organization.
-- `satellite/`: Allows a user to get information about satellites of a space organization.
-- `weapons/`: Allows a user to get information about space-related weapons.
-- `domain/`: Allows a user to get information about domains owned by a space organization.
-- `subdomain/`: Allows a user to get information about sub-domains used by a space organization.
-- `ip/`: Allows a user to get information about IP addresses used by a space organization.
-- `taglaws/`: Allows a user to get information of potential laws and guidelines to which a space organization is subject.
+- `orgname/`: Allows a user to get information about space organizations. (GET)
+- `orgnamegps/`: Allows a user to get information about space organizations. (GET)
+- `financial/`: Allows a user to get information about finance of a space organization. (GET)
+- `satellite/`: Allows a user to get information about satellites of a space organization. (GET)
+- `weapons/`: Allows a user to get information about space-related weapons. (GET)
+- `domain/`: Allows a user to get information about domains owned by a space organization. (GET)
+- `subdomain/`: Allows a user to get information about sub-domains used by a space organization. (GET)
+- `ip/`: Allows a user to get information about IP addresses used by a space organization. (GET)
+- `taglaws/`: Allows a user to get information of potential laws and guidelines to which a space organization is subject. (GET)
 
 ## Filters:
 
