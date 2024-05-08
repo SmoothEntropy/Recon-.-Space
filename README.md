@@ -116,8 +116,8 @@ Certain endpoints can be used with filters. Rather than getting a list of all da
 
 **Examples:**
 
-- Looking for satellites in LEO: `https://api.recon.space/myapi/satellite/?satelliteorbit=LEO`
-- Looking for satellites launched by Ariane and operated by China: `https://api.recon.space/myapi/satellite/?satellitelaunchvehicle=Ariane&satellitecountryoperator=China`
+- Looking for satellites in **LEO**: `https://api.recon.space/myapi/satellite/?satelliteorbit=LEO`
+- Looking for satellites launched by **Ariane** and operated by **China**: `https://api.recon.space/myapi/satellite/?satellitelaunchvehicle=Ariane&satellitecountryoperator=China`
 - Looking for the location of organizations that produced equipment and contain 'lock' in the name: `https://api.recon.space/myapi/orgname/?tags=manufacturer&orgname=lock`
 
 **Usage with Curl:**
@@ -132,7 +132,7 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT <youraccesstok
   ```bash
   curl -X GET -H "Accept: application/json" -H "Authorization: JWT <youraccesstoken>" 'https://api.recon.space/myapi/orgname/3011/' | jq
   ```
-- Looking for details about the internet domain where 3011 is the id of the domain:
+- Looking for details about the internet domain where **3011** is the id of the domain:
   ```bash
   curl -X GET -H "Accept: application/json" -H "Authorization: JWT <youraccesstoken>" 'https://api.recon.space/myapi/domain/3011/' | jq
   ```
@@ -140,14 +140,14 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT <youraccesstok
   ```bash
   curl -X GET -H "Accept: application/json" -H "Authorization: JWT <youraccesstoken>" 'https://api.recon.space/myapi/subdomain/57924/' | jq
   ```
-- Looking for the GPS location of the www.lockheedmartin.com server:
+- Looking for the GPS location of the **www.lockheedmartin.com** server:
   ```bash
   curl -X GET -H "Accept: application/json" -H "Authorization: JWT <youraccesstoken>" 'https://api.recon.space/myapi/ip/8348/' | jq
   ```
 
 Example of Use case :
 
-1 - Looking for orgname which contain lock in the name and that is taggued as Manufacturer. ( '| jq' at the end is optional)
+1 - Looking for orgname which contains **lock** in the name and that is tagged as **Manufacturer**. ( '| jq' at the end is optional)
 
 ```bash 
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space/myapi/orgname/?orgname=lock&tags=Manufacturer' |jq
@@ -199,13 +199,13 @@ response:
 }
 ```
 
-2 - Looking for the financial data of lockheed
+2 - Looking for the **financial data** of lockheed
 
 ```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space//myapi/orgname/3011/' |jq
 ```
 
-3 - Looking for details about the internet domain where 3011 is the id of the domain (not the organzation id)
+3 - Looking for details about the internet domain where **3011** is the id of the domain (not the organzation id)
 
 ```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space//myapi/domain/3011/' |jq
@@ -229,7 +229,7 @@ response:
 [...]
 ```
 
-3.1 - Looking for the ip of a of subdomain
+3.1 - Looking for the **ip** of a of subdomain
 
 ```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space//myapi/subdomain/57924/' |jq
@@ -245,7 +245,7 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccessto
 }
 ```
 
-3.2 - Looking for the gps location of the www.lockheedmartin.com lockheed server.
+3.2 - Looking for the gps location of the **www.lockheedmartin.com** lockheed server.
 
 ```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space//myapi/ip/8348/' |jq
