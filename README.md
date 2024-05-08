@@ -25,11 +25,11 @@ Response:
 }, ...]
 ```
 
-## Authenticated vs Public Endpoint
+## Authenticated vs Public Endpoints
 
 You can collect and fetch data from public endpoints without credentials by accessing the URL of the endpoint. Authenticated endpoints require the user to provide an access token obtained after a successful login.
 
-### Example to Use Authenticated Endpoint:
+### Example to Use Authenticated Endpoints:
 
 1. Obtain the access token by logging in using `https://api.recon.space/myapi/connect/`.
 2. Submit your credentials (login password).
