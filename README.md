@@ -200,10 +200,17 @@ response:
 ```
 
 2 - Looking for the financial data of lockheed
+
+```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'http://127.0.0.1:8000/myapi/orgname/3011/' |jq
+```
 
 3 - Looking for details about the internet domain where 3011 is the id of the domain (not the organzation id)
+
+```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'http://127.0.0.1:8000/myapi/domain/3011/' |jq
+```
+```json
 response:
 [...]
 {
@@ -220,9 +227,15 @@ response:
   "domain": "lockheedmartin.com"
 }
 [...]
+```
 
 3.1 - Looking for the ip of a of subdomain
+
+```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'http://127.0.0.1:8000/myapi/subdomain/57924/' |jq
+```
+
+```json
 {
   "id": 55377,
   [...]
@@ -230,8 +243,15 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccessto
   "ipsubdom": "166.21.250.209",
   [...]
 }
+```
+
 3.2 - Looking for the gps location of the www.lockheedmartin.com lockheed server.
+
+```bash
 curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'http://127.0.0.1:8000/myapi/ip/8348/' |jq
+```
+
+```json
 response:
  "id": 8348,
   "ipaddress": "166.21.250.209",
@@ -241,3 +261,4 @@ response:
   "ipgeopoint": "POINT(-97.822 37.751)",
   [...]
 }
+```
