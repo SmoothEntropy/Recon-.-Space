@@ -355,6 +355,7 @@ curl -X GET  -H "Accept: application/json" -H "Authorization: JWT <youraccesstok
   ```
 
 Example of Use case :
+
 1 - Looking for orgname which contain lock in the name and that is taggued as Manufacturer. ( '| jq' at the end is optional)
 
 ```bash 
