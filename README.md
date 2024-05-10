@@ -118,7 +118,7 @@ Certain endpoints can be used with filters. Rather than getting a list of all da
 
 - Looking for satellites in **LEO**: `https://api.recon.space/myapi/satellite/?satelliteorbit=LEO`
 - Looking for satellites launched by **Ariane** and operated by **China**: `https://api.recon.space/myapi/satellite/?satellitelaunchvehicle=Ariane&satellitecountryoperator=China`
-- Looking for the location of organizations that produced equipment and contain 'lock' in the name: `https://api.recon.space/myapi/orgname/?tags=manufacturer&orgname=lock`
+- Looking for the location of organizations that produced equipment and contain 'lock' in the name: `https://api.recon.space/myapi/orgnamegps/?tags=manufacturer&orgname=lock`
 
 **Usage with Curl:**
 
