@@ -202,7 +202,7 @@ response:
 2 - Looking for the **financial data** of lockheed
 
 ```bash
-curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space//myapi/orgname/3011/' |jq
+curl -X GET  -H "Accept: application/json" -H "Authorization: JWT  <youraccesstoken>" 'https://api.recon.space/myapi/financial/891/' |jq
 ```
 
 3 - Looking for details about the internet domain where **3011** is the id of the domain (not the organzation id)
